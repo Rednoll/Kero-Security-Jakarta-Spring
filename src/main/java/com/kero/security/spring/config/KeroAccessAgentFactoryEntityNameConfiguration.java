@@ -5,16 +5,16 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 import com.kero.security.core.agent.KeroAccessAgentFactory;
-import com.kero.security.core.agent.configurator.AccessAgentJakartaNameConfigurator;
+import com.kero.security.core.agent.configurator.AccessAgentEntityNameConfigurator;
 
 @Configuration
-public class KeroAccessAgentFactoryJakartaNameConfiguration implements KeroAccessAgentFactorySpringConfiguration {
+public class KeroAccessAgentFactoryEntityNameConfiguration implements KeroAccessAgentFactorySpringConfiguration {
 	
 	@Value("${kero.security.jakarta.entity.name.enabled:true}")
 	private boolean entityNameEnabled;
 
 	@Autowired
-	private AccessAgentJakartaNameConfigurator configurator;
+	private AccessAgentEntityNameConfigurator configurator;
 	
 	@Override
 	public void configure(KeroAccessAgentFactory factory) {

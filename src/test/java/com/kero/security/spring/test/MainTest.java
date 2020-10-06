@@ -14,10 +14,10 @@ import com.kero.security.core.agent.configurator.KeroAccessAgentConfiguratorBean
 import com.kero.security.core.scheme.AccessScheme;
 import com.kero.security.spring.config.KeroAccessAgentBean;
 import com.kero.security.spring.config.KeroAccessAgentFactoryBean;
-import com.kero.security.spring.config.KeroAccessAgentFactoryJakartaNameConfiguration;
+import com.kero.security.spring.config.KeroAccessAgentFactoryEntityNameConfiguration;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {KeroAccessAgentBean.class, KeroAccessAgentConfiguratorBeans.class, KeroAccessAgentFactoryJakartaNameConfiguration.class, KeroAccessAgentFactoryBean.class})
+@SpringBootTest(classes = {KeroAccessAgentBean.class, KeroAccessAgentConfiguratorBeans.class, KeroAccessAgentFactoryEntityNameConfiguration.class, KeroAccessAgentFactoryBean.class})
 @ActiveProfiles("test")
 public class MainTest {
 
@@ -27,7 +27,7 @@ public class MainTest {
 	@Test
 	public void test() {
 		
-		AccessScheme scheme = agent.getOrCreateScheme(JakartaNameTestEntity.class);
+		AccessScheme scheme = agent.getOrCreateScheme(EntityNameTestEntity.class);
 	
 		assertEquals(scheme.getName(), "Jakarta");
 	}
