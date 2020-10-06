@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 import com.kero.security.core.agent.KeroAccessAgent;
 import com.kero.security.core.agent.configuration.KeroAccessAgentConfigurator;
-import com.kero.security.core.scheme.configurator.JakartaNameAccessSchemeConfigurator;
+import com.kero.security.core.scheme.configurator.JakartaAccessSchemeNamingStrategy;
 
 @Component
 public class AccessAgentJakartaNameConfigurator implements KeroAccessAgentConfigurator {
@@ -12,6 +12,6 @@ public class AccessAgentJakartaNameConfigurator implements KeroAccessAgentConfig
 	@Override
 	public void configure(KeroAccessAgent agent) {
 	
-		agent.addConfigurator(new JakartaNameAccessSchemeConfigurator());
+		agent.setSchemeNamingStrategy(new JakartaAccessSchemeNamingStrategy());
 	}
 }

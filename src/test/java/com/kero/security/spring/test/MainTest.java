@@ -29,6 +29,6 @@ public class MainTest {
 		
 		AccessScheme scheme = agent.getOrCreateScheme(JakartaNameTestEntity.class);
 	
-		assertEquals(scheme.getAliase(), "Jakarta");
+		assertEquals(scheme.getName(), "Jakarta");
 	}
 }

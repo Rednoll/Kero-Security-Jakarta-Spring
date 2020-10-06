@@ -33,8 +33,8 @@ dependencies {
 	
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 
-	implementation 'com.github.Rednoll:Kero-Security:7bbbb4f6b6'
-	implementation 'com.github.Rednoll:Kero-Security-Jakarta:062302e'
+	implementation 'com.github.Rednoll:Kero-Security:ab1adca'
+	implementation 'com.github.Rednoll:Kero-Security-Jakarta:2acbfef'
 	implementation 'com.github.Rednoll:Kero-Security-Spring:8e562720af'
 }
 
