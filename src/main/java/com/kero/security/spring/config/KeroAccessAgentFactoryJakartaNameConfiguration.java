@@ -10,8 +10,8 @@ import com.kero.security.core.agent.configurator.AccessAgentJakartaNameConfigura
 @Configuration
 public class KeroAccessAgentFactoryJakartaNameConfiguration implements KeroAccessAgentFactorySpringConfiguration {
 	
-	@Value("${kero.security.jakarta.entity.name:true}")
-	private boolean entityName;
+	@Value("${kero.security.jakarta.entity.name.enabled:true}")
+	private boolean entityNameEnabled;
 
 	@Autowired
 	private AccessAgentJakartaNameConfigurator configurator;
@@ -19,7 +19,7 @@ public class KeroAccessAgentFactoryJakartaNameConfiguration implements KeroAcces
 	@Override
 	public void configure(KeroAccessAgentFactory factory) {
 	
-		if(this.entityName) {
+		if(this.entityNameEnabled) {
 			
 			factory.addConfigurator(this.configurator);
 		}
