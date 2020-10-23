@@ -84,6 +84,8 @@ jar {
 dependencies {
 
 	implementation 'org.slf4j:slf4j-api:1.7.25'
+	implementation 'org.springframework.boot:spring-boot:[2.0,)'
+	implementation 'jakarta.persistence:jakarta.persistence-api:2.2.3'
 	
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 
