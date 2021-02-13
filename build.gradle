@@ -69,6 +69,11 @@ description = 'Kero-Security-Jakarta-Spring - auto configuration jakarta integra
 repositories {
 
 	mavenCentral()
+	
+	maven {
+
+		url "https://oss.sonatype.org/content/repositories/snapshots"
+	}
 }
 
 bootJar {
@@ -89,9 +94,9 @@ dependencies {
 	
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 
-	implementation 'com.github.rednoll:kero-security:[0.1,)'
+	implementation 'com.github.rednoll:kero-security:0.2.0-SNAPSHOT'
 	implementation 'com.github.rednoll:kero-security-jakarta:[0.1,)'
-	implementation 'com.github.rednoll:kero-security-spring:[0.1,)'
+	implementation 'com.github.rednoll:kero-security-spring:0.2.0-SNAPSHOT'
 }
 
 java {
